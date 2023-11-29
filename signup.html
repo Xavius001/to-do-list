@@ -31,9 +31,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="task.html">Home <span class="sr-only">(current)</span></a>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
@@ -47,28 +47,34 @@
     
 
     <h1>Signup</h1>
-    <form id="signupForm">
+    <form id="signupForm" method="post">
         <label for="signupUsername">Username:</label>
-        <input type="text" id="signupUsername" required>
+        <input type="email" id="signupUsername" name="signupUsername" required>
         <br>
         <label for="signupPassword">Password:</label>
-        <input type="password" id="signupPassword" required>
+        <input type="password" id="signupPassword" name="signupPassword" required>
         <br>
-        <button type="button" onclick="signup()">Sign Up</button>
+        <!-- <button type="button" onclick="signup()">Sign Up</button> -->
+        <button type="submit">Sign Up</button>
     </form>
+    <div id="responseS"></div>
+    <script src="signup.js"></script>
 
     <h1>Login</h1>
-    <form id="loginForm">
+    <form id="loginForm" method="post">
         <label for="loginUsername">Username:</label>
-        <input type="text" id="loginUsername" required>
+        <input type="email" id="loginUsername" name="loginUsername" required>
         <br>
         <label for="loginPassword">Password:</label>
-        <input type="password" id="loginPassword" required>
+        <input type="password" id="loginPassword" name="loginPassword" required>
         <br>
-        <button type="button" onclick="login()">Login</button>
+        <!-- <button type="button" onclick="login()">Login</button> -->
+        <button type="submit">Login</button>
     </form>
+    <div id="responseL"></div>
+    <script src="login.js"></script>
 
-    <script>
+    <!-- <script>
         // Simple "database" to store user credentials
         const users = [];
 
@@ -100,16 +106,7 @@
                 alert('Invalid username or password. Please try again.');
             }
         }
-    </script>
-
-    <!-- Update the form actions to point to server endpoints -->
-    <form id="signupForm" action="/signup" method="post">
-    <!-- ... existing code ... -->
-    </form>
-
-    <form id="loginForm" action="/login" method="post">
-    <!-- ... existing code ... -->
-    </form>
+    </script> -->
 
 
 </body>
