@@ -4,7 +4,7 @@ include("session.php");
 ?>
 <html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content= "device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
@@ -12,20 +12,19 @@ include("session.php");
     <title>To do List</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">To Do List</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="task.php">To Do List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <!-- <li class="nav-item active">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="task.html">Home <span class="sr-only">(current)</span></a>
             </li> -->
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="about.php">About</a>
             </li>
-            
             <!-- <li class="nav-item">
                 <a class="nav-link" href="signup.html">SignUp</a>
             </li> -->
@@ -34,7 +33,7 @@ include("session.php");
           </li>
           </ul>
         </div>
-    </nav>
+      </nav>
     <header>
       <h1>To Do List</h1>
       <form id="new-task-form" method="post">

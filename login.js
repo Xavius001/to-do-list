@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // If the request is complete and successful (status 200), update the content of the responseDiv.
                 responseDiv.innerHTML = xhr.responseText; // Display the response from the server.
                 if (responseDiv.innerHTML.includes("Login success.") && responseDiv.innerHTML != null) {
-                    window.location.replace("task_client.php");
+                    window.location.replace("task.php");
                 }
             }
         };
