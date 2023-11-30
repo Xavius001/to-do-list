@@ -1,7 +1,10 @@
-<!DOCTYPE html>
+<?php
+// Include the configuration file to establish a database connection.
+include("session.php");
+?>
 <html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content= "device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
@@ -9,41 +12,51 @@
     <title>To do List</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">To Do List</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="task.php">To Do List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="task.html">Home <span class="sr-only">(current)</span></a>
+            </li> -->
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="about.php">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="signup.html">SignUp</a>
-            </li>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
+          </li>
           </ul>
         </div>
-    </nav>
+      </nav>
     <header>
       <h1>To Do List</h1>
-      <form id="new-task-form">
+      <form id="new-task-form" method="post">
         <input 
           type="text" 
           name="new-task-input" 
           id="new-task-input" 
           placeholder="What are your plans for today?" />
         <input 
+        type="text" 
+        name="new-taskId-input" 
+        id="new-taskId-input"
+        hidden />
+        <input 
           type="submit"
           id="new-task-submit" 
           value="Add task" />
       </form>
+      <div id="responseT"></div>
+    <script src="task_3.js"></script>
     </header>
     <main>
+
       <section class="task-list">
         <h2>Tasks</h2>
   
@@ -55,10 +68,17 @@
                 type="text" 
                 class="text" 
                 value="A new task"
+                name = "currentTask"
+                readonly>
+                <input 
+                type="text" 
+                class="text" 
+                value="A new task"
+                name = "currentTaskId"
                 readonly>
             </div>
             <div class="actions">
-              <button class="edit">Edit</button>
+              <button class="edit" >Edit</button>
               <button class="delete">Delete</button>
             </div>
           </div> -->
@@ -66,7 +86,7 @@
         </div>
       </section>
     </main>
-    <script src="main.js"></script>
+    <!-- <script src="task.js"></script> -->
     
   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

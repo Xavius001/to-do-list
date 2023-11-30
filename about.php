@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+// Include the configuration file to establish a database connection.
+include("session.php");
+?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -11,7 +14,7 @@
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="task.html">To Do List</a>
+        <a class="navbar-brand" href="task.php">To Do List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,11 +24,14 @@
               <a class="nav-link" href="task.html">Home <span class="sr-only">(current)</span></a>
             </li> -->
             <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.php">About</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="signup.html">SignUp</a>
-            </li>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
+          </li>
           </ul>
         </div>
       </nav>

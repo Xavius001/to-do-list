@@ -307,3 +307,15 @@ nav{
     border-radius:2px;
     font-size:x-large;
 }
+
+/* Add your styling here */
+.edit, .save {
+    background-color: #007bff; /* Replace with your desired color */
+    color: #fff; /* Replace with your desired color */
+  }
+  
+  .cancel, .delete {
+    background-color: #dc3545; /* Replace with your desired color */
+    color: #fff; /* Replace with your desired color */
+  }
+  
